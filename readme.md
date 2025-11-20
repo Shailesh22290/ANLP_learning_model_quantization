@@ -31,12 +31,9 @@ All dependencies are installed automatically within the provided Colab notebook.
 
 ## Repository Structure
 
-* **`22290_shailesh_Advance nlpassignment2.ipynb`**: The primary Python (Colab) notebook containing all the necessary code for loading weights, running inference, evaluating performance, and generating the final comparison table.
-* **`weights/`**: This conceptual directory holds the trained model weights for the Baseline, PTQ, QAT, and Q-LoRA models. *(These weights are loaded directly from a public URL in the notebook for reproducibility).*
+* **`22290_shailesh_Advance nlpassignment2.ipynb`**: The notebook containing all the necessary code for loading weights, running inference, evaluating performance, and generating the final comparison table.
+* **`weights/`**: This repo has trained model weights for the Baseline, PTQ, QAT, and Q-LoRA models.
 
-## How to Reproduce Results (Inference & Evaluation)
-
-The submission focuses on a reproducible evaluation pipeline. The full training code (fine-tuning, QAT, etc.) is included but commented out to ensure the notebook runs quickly and meets the time limit requirements.
 
 ### **Steps to Run `22290_shailesh_Advance nlpassignment2.ipynb`**
 
@@ -48,4 +45,11 @@ The submission focuses on a reproducible evaluation pipeline. The full training 
 
 ## Results
 
-The quantitative performance comparison (Accuracy, Macro F1, and Inference Speed) for all four models is mentioned as a  end of the `22290_shailesh_Advance nlpassignment2.ipynb` execution.
+| Approach                     | Accuracy | Macro F1 | Total Time (s) | Time/Sample (s) |
+|-----------------------------|----------|----------|----------------|------------------|
+| Reference Model             | 0.9325   | 0.8762   | 13.04          | 0.0065           |
+| Post-Training Quant. (PTQ)  | 0.9325   | 0.8762   | 450.13         | 0.2251           |
+| Quant-Aware Training (QAT)  | 0.9305   | 0.8698   | 12.78          | 0.0064           |
+| Q-LoRA                      | 0.9205   | 0.8700   | 13.52          | 0.0068           |
+
+
